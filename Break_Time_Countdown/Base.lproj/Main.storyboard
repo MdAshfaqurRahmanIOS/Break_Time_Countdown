@@ -53,7 +53,7 @@
                                 <rect key="frame" x="236" y="663" width="158" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="44"/>
                                 <state key="normal" title="Lunch"/>
                                 <connections>
                                     <action selector="allActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zyt-hg-fmi"/>
@@ -63,7 +63,7 @@
                                 <rect key="frame" x="20" y="673" width="158" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="44"/>
                                 <state key="normal" title="Tea"/>
                                 <connections>
                                     <action selector="allActionButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hrs-IP-Xlf"/>
