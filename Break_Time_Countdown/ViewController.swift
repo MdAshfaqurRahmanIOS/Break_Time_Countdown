@@ -9,6 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var breakNameLabel: UILabel!
+    
+   
+    
+    
+    
     @IBOutlet weak var countdownProgress: UIProgressView!
     
     var progressCounter = 1
@@ -20,10 +27,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func allActionButton(_ sender: UIButton) {
+        
         if sender.tag == 1 {
+            
+            breakNameLabel.text = "Tea Break Time"
+            
             print("Tea Button press")
+            
+            
+            
             progressCounter = 1
             timer.invalidate()
+            
+           
+            
             
             timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
                 
@@ -38,6 +55,9 @@ class ViewController: UIViewController {
                 }
                 self.progressCounter += 1
                 self.countdownProgress.progress = result
+                
+                
+              
             }
             
             
@@ -58,6 +78,7 @@ class ViewController: UIViewController {
             // 0.2 = 20%  2 /10 = 0.2
             
         } else {
+            breakNameLabel.text = "Lunch Break Time"
             print("Lunch Button press")
             countdownProgress.progress = 0.5
             
