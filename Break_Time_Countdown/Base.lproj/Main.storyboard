@@ -74,6 +74,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="breakNameLabel" destination="keC-zZ-hIN" id="fot-lU-7UX"/>
                         <outlet property="countdownProgress" destination="Pgv-ER-Zpe" id="7bF-ln-Jh5"/>
                     </connections>
                 </viewController>
