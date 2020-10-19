@@ -154,6 +154,8 @@
                     <connections>
                         <outlet property="breakNameLabel" destination="keC-zZ-hIN" id="fot-lU-7UX"/>
                         <outlet property="countdownProgress" destination="Pgv-ER-Zpe" id="7bF-ln-Jh5"/>
+                        <outlet property="countdownTimer" destination="Mto-RN-JLs" id="R3o-z6-zeX"/>
+                        <outlet property="currentDateViewLabel" destination="Eyy-M5-xas" id="Lgn-wb-O7i"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
