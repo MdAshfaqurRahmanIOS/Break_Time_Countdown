@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var countdownTimer: UILabel!
     @IBOutlet weak var countdownProgress: UIProgressView!
     
+    var dict = ["Tea": 45, "Lunch": 60]
     var totlaTimeINMinute = 0
     var totalTimeInSecont = 0
     var progressCounter = 1
@@ -31,69 +32,35 @@ class ViewController: UIViewController {
         currentDateViewLabel.text = finalDateView
         
     }
-
+    
     @IBAction func allActionButton(_ sender: UIButton) {
         
-        if sender.tag == 1 {
+        breakNameLabel.text = "\(sender.currentTitle!) Break Time"
+        let timeDuration = dict[sender.currentTitle!]!
+        
+        totlaTimeINMinute = timeDuration
+        totalTimeInSecont = 60
+        progressCounter = 1
+        timer.invalidate()
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
             
-            breakNameLabel.text = "Tea Break Time"
-            let timeDuration = 45
+            let result = Float(self.progressCounter) / Float(timeDuration*60)
             
-            totlaTimeINMinute = timeDuration
-            totalTimeInSecont = 60
-            progressCounter = 1
-            timer.invalidate()
-            
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
-                
-                let result = Float(self.progressCounter) / Float(timeDuration*60)
-                
-                if self.progressCounter == timeDuration*60 {
-                    self.timer.invalidate()
-                } else if self.totalTimeInSecont == 0 || self.totlaTimeINMinute == timeDuration{
-                    self.totlaTimeINMinute -= 1
-                    self.totalTimeInSecont = 60
-                }
-                self.progressCounter += 1
-                self.totalTimeInSecont -= 1
-                
-                self.countdownTimer.text = "\(self.totlaTimeINMinute).\(self.totalTimeInSecont)"
-              
-                self.countdownProgress.progress = result
-                
+            if self.progressCounter == timeDuration*60 {
+                self.timer.invalidate()
+            } else if self.totalTimeInSecont == 0 || self.totlaTimeINMinute == timeDuration{
+                self.totlaTimeINMinute -= 1
+                self.totalTimeInSecont = 60
             }
+            self.progressCounter += 1
+            self.totalTimeInSecont -= 1
             
-        } else {
+            self.countdownTimer.text = "\(self.totlaTimeINMinute).\(self.totalTimeInSecont)"
             
-            breakNameLabel.text = "Lunch Break Time"
-            let timeDuration = 60
-            
-            totlaTimeINMinute = timeDuration
-            totalTimeInSecont = 60
-            progressCounter = 1
-            timer.invalidate()
-            
-            timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { (Timer) in
-                
-                let result = Float(self.progressCounter) / Float(timeDuration*60)
-                
-                if self.progressCounter == timeDuration*60 {
-                    self.timer.invalidate()
-                } else if self.totalTimeInSecont == 0 || self.totlaTimeINMinute == timeDuration{
-                    self.totlaTimeINMinute -= 1
-                    self.totalTimeInSecont = 60
-                }
-                self.progressCounter += 1
-                self.totalTimeInSecont -= 1
-                
-                self.countdownTimer.text = "\(self.totlaTimeINMinute).\(self.totalTimeInSecont)"
-              
-                self.countdownProgress.progress = result
-                
-            }
+            self.countdownProgress.progress = result
             
         }
     }
     
 }
-
