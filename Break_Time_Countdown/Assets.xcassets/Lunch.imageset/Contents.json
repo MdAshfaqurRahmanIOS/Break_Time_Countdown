@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Color Hunt Palette 213165.png",
+      "filename" : "Lunch.jpg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Lunch@2x.jpg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Lunch@3x.jpg",
       "idiom" : "universal",
       "scale" : "3x"
     }

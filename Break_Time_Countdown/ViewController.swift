@@ -14,8 +14,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var currentDateViewLabel: UILabel!
     @IBOutlet weak var countdownTimer: UILabel!
     @IBOutlet weak var countdownProgress: UIProgressView!
+    @IBOutlet weak var progressPercentace: UILabel!
+    @IBOutlet weak var statusNotify: UILabel!
     
-    var dict = ["Tea": 45, "Lunch": 60]
+    var dict = ["Tea": 1, "Lunch": 6]
     var totlaTimeINMinute = 0
     var totalTimeInSecont = 0
     var progressCounter = 1
@@ -59,6 +61,7 @@ class ViewController: UIViewController {
             self.countdownTimer.text = "\(self.totlaTimeINMinute).\(self.totalTimeInSecont)"
             
             self.countdownProgress.progress = result
+            self.progressPercentace.text = "\(String(format: "%.2f", result*100))%"
             
         }
     }

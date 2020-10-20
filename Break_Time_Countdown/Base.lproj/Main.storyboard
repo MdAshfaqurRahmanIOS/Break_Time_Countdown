@@ -17,18 +17,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="glN-9V-ZG7">
+                                <rect key="frame" x="20" y="88" width="374" height="774"/>
+                            </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Pgv-ER-Zpe">
-                                <rect key="frame" x="20" y="636" width="374" height="4"/>
+                                <rect key="frame" x="134" y="636" width="260" height="4"/>
                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                                 <color key="tintColor" systemColor="linkColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="4pg-Hw-vzf"/>
-                                    <constraint firstAttribute="height" constant="4" id="9c5-py-bWh"/>
-                                </constraints>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mto-RN-JLs">
                                 <rect key="frame" x="20" y="390" width="374" height="205"/>
-                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="205" id="6j6-d8-Bq5"/>
                                     <constraint firstAttribute="width" constant="374" id="w6s-RB-IGK"/>
@@ -121,6 +119,16 @@
                                 <color key="textColor" red="0.027450980392156862" green="0.050980392156862744" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="highlightedColor" systemColor="secondarySystemGroupedBackgroundColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="qdk-bs-4d9">
+                                <rect key="frame" x="29" y="615.5" width="86" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="KMF-LW-yda"/>
+                                    <constraint firstAttribute="height" constant="45" id="che-ma-4dW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.96470588235294119" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
@@ -128,26 +136,32 @@
                         <constraints>
                             <constraint firstItem="Jfr-sc-Lmm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0HC-av-ubS"/>
                             <constraint firstItem="Mto-RN-JLs" firstAttribute="top" secondItem="Eyy-M5-xas" secondAttribute="bottom" constant="54" id="2uI-sG-ggQ"/>
-                            <constraint firstItem="Pgv-ER-Zpe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3tk-le-ASI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vTN-jk-nt8" secondAttribute="trailing" constant="20" id="4ba-V4-lzg"/>
-                            <constraint firstItem="vTN-jk-nt8" firstAttribute="top" secondItem="Pgv-ER-Zpe" secondAttribute="bottom" constant="39" id="65D-Yo-ZfD"/>
+                            <constraint firstItem="glN-9V-ZG7" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="9Ae-ke-ziJ"/>
                             <constraint firstItem="Eyy-M5-xas" firstAttribute="top" secondItem="keC-zZ-hIN" secondAttribute="bottom" constant="50" id="9CS-bQ-M0e"/>
                             <constraint firstItem="Eyy-M5-xas" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="ABo-6w-xm8"/>
+                            <constraint firstItem="vTN-jk-nt8" firstAttribute="top" secondItem="Pgv-ER-Zpe" secondAttribute="bottom" constant="39" id="CWc-XL-bgi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="glN-9V-ZG7" secondAttribute="trailing" id="DlE-Ow-kjq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mto-RN-JLs" secondAttribute="trailing" constant="20" id="EN2-yc-OLY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OOh-wF-bhI" secondAttribute="trailing" constant="14" id="Gs3-RR-xcH"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pgv-ER-Zpe" secondAttribute="trailing" constant="20" id="Hjc-6t-l9f"/>
+                            <constraint firstItem="Pgv-ER-Zpe" firstAttribute="leading" secondItem="qdk-bs-4d9" secondAttribute="trailing" constant="19" id="HTi-Y6-MGs"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eyy-M5-xas" secondAttribute="trailing" constant="14" id="KeF-FH-3oA"/>
                             <constraint firstItem="keC-zZ-hIN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="P2S-Wd-FbI"/>
                             <constraint firstItem="OOh-wF-bhI" firstAttribute="top" secondItem="vTN-jk-nt8" secondAttribute="bottom" constant="32" id="TFe-oJ-nVs"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="glN-9V-ZG7" secondAttribute="bottom" id="WFt-aH-TBC"/>
                             <constraint firstItem="Mto-RN-JLs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="YjG-Gv-Dfd"/>
-                            <constraint firstItem="Jfr-sc-Lmm" firstAttribute="top" secondItem="Pgv-ER-Zpe" secondAttribute="bottom" constant="39" id="a7O-uE-ZLM"/>
                             <constraint firstItem="vTN-jk-nt8" firstAttribute="leading" secondItem="Jfr-sc-Lmm" secondAttribute="trailing" constant="59" id="eAi-66-387"/>
-                            <constraint firstItem="Pgv-ER-Zpe" firstAttribute="top" secondItem="Mto-RN-JLs" secondAttribute="bottom" constant="41" id="exu-3q-VJw"/>
                             <constraint firstItem="keC-zZ-hIN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="1" id="lA0-yA-nwR"/>
+                            <constraint firstItem="qdk-bs-4d9" firstAttribute="centerY" secondItem="Pgv-ER-Zpe" secondAttribute="centerY" id="mw3-J3-owG"/>
                             <constraint firstItem="vTN-jk-nt8" firstAttribute="leading" secondItem="Jfr-sc-Lmm" secondAttribute="trailing" constant="59" id="oRj-r7-eT3"/>
                             <constraint firstItem="OOh-wF-bhI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="p0v-9d-LCe"/>
+                            <constraint firstItem="qdk-bs-4d9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="pcS-ib-uWc"/>
+                            <constraint firstItem="Jfr-sc-Lmm" firstAttribute="top" secondItem="qdk-bs-4d9" secondAttribute="bottom" constant="19" id="qHC-9c-afn"/>
+                            <constraint firstItem="glN-9V-ZG7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="x7H-VD-1K0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OOh-wF-bhI" secondAttribute="bottom" constant="9" id="xgU-PN-UyP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="keC-zZ-hIN" secondAttribute="trailing" constant="20" id="xgd-Xk-SU3"/>
+                            <constraint firstItem="Jfr-sc-Lmm" firstAttribute="baseline" secondItem="vTN-jk-nt8" secondAttribute="baseline" id="yTD-vD-oWM"/>
+                            <constraint firstItem="Pgv-ER-Zpe" firstAttribute="trailing" secondItem="vTN-jk-nt8" secondAttribute="trailing" id="yVt-We-KSL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X20-53-2Jt"/>
@@ -156,6 +170,8 @@
                         <outlet property="countdownProgress" destination="Pgv-ER-Zpe" id="7bF-ln-Jh5"/>
                         <outlet property="countdownTimer" destination="Mto-RN-JLs" id="R3o-z6-zeX"/>
                         <outlet property="currentDateViewLabel" destination="Eyy-M5-xas" id="Lgn-wb-O7i"/>
+                        <outlet property="progressPercentace" destination="qdk-bs-4d9" id="AHM-zo-SA8"/>
+                        <outlet property="statusNotify" destination="OOh-wF-bhI" id="Zi1-wy-g8f"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
