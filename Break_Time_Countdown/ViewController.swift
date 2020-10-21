@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressPercentace: UILabel!
     @IBOutlet weak var statusNotify: UILabel!
     
-    var dict = ["Tea": 1, "Lunch": 6]
+    var dict = ["Tea": 45, "Lunch": 60]
     var totlaTimeINMinute = 0
     var totalTimeInSecont = 0
     var progressCounter = 1
