@@ -17,6 +17,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var progressPercentace: UILabel!
     @IBOutlet weak var statusNotify: UILabel!
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
+    
+    
+    
     var dict = ["Tea": 45, "Lunch": 60]
     var totlaTimeINMinute = 0
     var totalTimeInSecont = 0
@@ -37,7 +42,20 @@ class ViewController: UIViewController {
     
     @IBAction func allActionButton(_ sender: UIButton) {
         
+        if sender.tag == 1 {
+            print("Take your Tea Properly")
+            statusNotify.text = "Take your Tea Properly"
+            backgroundImage.image = #imageLiteral(resourceName: "Tea")
+            
+        } else {
+            print("Take your Lunch Properly")
+            statusNotify.text = "Take your Lunch Properly"
+            backgroundImage.image = #imageLiteral(resourceName: "Lunch")
+        }
+        
         breakNameLabel.text = "\(sender.currentTitle!) Break Time"
+        
+        
         let timeDuration = dict[sender.currentTitle!]!
         
         totlaTimeINMinute = timeDuration
@@ -55,6 +73,8 @@ class ViewController: UIViewController {
                 self.totlaTimeINMinute -= 1
                 self.totalTimeInSecont = 60
             }
+            
+            
             self.progressCounter += 1
             self.totalTimeInSecont -= 1
             
@@ -63,6 +83,8 @@ class ViewController: UIViewController {
             self.countdownProgress.progress = result
             self.progressPercentace.text = "\(String(format: "%.2f", result*100))%"
             
+            
+                        
         }
     }
     
